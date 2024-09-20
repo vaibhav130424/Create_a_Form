@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            background:  radial-gradient(circle, rgb(203, 228, 251) 0%, rgb(255, 22, 22)100%);
+        }
+        .heading{
+            text-align: center;
+            margin-top:10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+    
+        .form-container{
+            background-color: #F4F4F4;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            width:450px;
+            text-align: center;
+            margin: auto;
+            padding:20px;
+            border-radius:5px;
+        }
+        .input-field{
+            width:100%;
+            padding:10px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            margin-bottom: 15px;
+        }
+        label{
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #000000;
+            font-family: Arial, sans-serif;
+        }
+    
+        .text-area{
+            width:100%;
+            height:100px;
+            padding:10px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+    
+        .rating{
+            margin-bottom: 15px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .rating input{
+            margin-right: 5px;
+        }
+        .rating label{
+            margin-right: 15px;
+        }
+
+        span{
+            color:red;
+            font-weight: bold;
+        }
+        .terms{
+            text-align: left;
+        }
+    
+        .button{
+            background-color: green;
+            padding:8px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: darkgreen;
+        }
+    
+    </style>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div>
+        <h1 class="heading">Feedback Form</h1>
+    </div>
+    <div class="form-container">
+        <form>
+            <label for="feedback-type">Feedback Type:</label>
+            <select class="input-field" id="feedback-type" name="feedback-type">
+                <option value="compliment">Compliment</option>
+                <option value="excellent">Excellent</option>
+                <option value="average">Average</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" class="text-area" name="message"></textarea>
+
+            <label>Website Rating:</label>
+            <div class="rating">
+                <input type="radio" name="rating" value="excellent" id="excellent">
+                <label for="excellent">Excellent</label>
+
+                <input type="radio" name="rating" value="good" id="good">
+                <label for="good">Good</label>
+
+                <input type="radio" name="rating" value="average" id="average">
+                <label for="average">Average</label>
+
+                <input type="radio" name="rating" value="poor" id="poor">
+                <label for="poor">Poor</label>
+            </div>
+
+            <label for="age">Age (10-100):</label>
+            <input type="number" id="age" class="input-field" name="age" min="10" max="100">
+
+            <label for="email">Email <span>*</span>:</label>
+            <input type="email" id="email" class="input-field" name="email" required>
+
+            <label for="password">Password (min. 8 characters):</label>
+            <input type="password" id="password" class="input-field" name="password" minlength="8" required>
+
+            <label for="website">Website URL (optional):</label>
+            <input type="url" id="website" class="input-field" name="website">
+
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to terms and conditions.</label>
+            </div>
+
+            <button class="button" type="submit">Submit</button>
+            <button type="reset" class="button">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
